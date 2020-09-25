@@ -27,7 +27,6 @@ client.on('connected', (address, port) => {
 });
 
 
-let count = 0;
 const incrementValue = 20;
 
 client.on('message', async (target, context, message, self) => {
@@ -39,11 +38,6 @@ client.on('message', async (target, context, message, self) => {
     const commandName = command.substring(1); // remove the prefix from command
     
     if(commandName === 'hue'){
-        // let output = '';
-        // for (const prop in states) {
-        //     console.log(`${prop}: ${states[prop].desc}`);
-        //     output += `!${prop} - ${states[prop].desc}`;
-        // }
         client.say(target, 'You can find the list of commands below.');
     }
 
